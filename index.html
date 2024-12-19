@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+<body style="background-image: url(https://static.india.com/wp-content/uploads/2022/05/education-image.jpg); background-size: cover; background-repeat: no-repeat; background-position: center;"></body>
+    <header>
+        <div class="container">
+            <h1>Educational Blog</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="categores.html">Categories</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+    </header>
+
+    <main>
+        <section id="categories" class="page-section">
+            <h2>Categories</h2>
+            <ul>
+                <li><a href="https://kiet.codetantra.com/login.jsp#/contents">Technology</a>: Articles and updates on the latest advancements in AI, programming, and gadgets.</li>
+                <li><a href="#">Health</a>: Tips and guides for mental and physical well-being, including fitness and diet plans.</li>
+                <li><a href="#">Finance</a>: Insights into smart investments, saving strategies, and market trends.</li>
+            </ul>
+        </section>
+
+        <section id="blog-posts" class="page-section">
+            <h2>Latest Posts</h2>
+
+            <article class="blog-post">
+                <a href="https://www.google.com/" target="_blank">
+                    
+                <img src="edu1.jpeg" alt="AI Basics">
+                </a>
+                <h3>Understanding AI: Basics of Artificial Intelligence</h3>
+                <p><strong>Category:</strong> Technology</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin malesuada justo vel enim cursus, id dignissim ipsum fermentum...</p>
+                <a href="#">Read More</a>
+            </article>
+
+
+            <article class="blog-post">
+                <img src="edu2.jpg" alt="Mental Health Tips" id="huu" >
+                <h3>Top 5 Tips for Maintaining Mental Health</h3>
+                <p><strong>Category:</strong> Health</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin malesuada justo vel enim cursus, id dignissim ipsum fermentum...</p>
+                <a href="#">Read More</a>
+            </article>
+
+            <article class="blog-post">
+                <img src="edu3.jpeg" alt="Investment Strategies">
+                <h3>Smart Investment Strategies for Beginners</h3>
+                <p><strong>Category:</strong> Finance</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin malesuada justo vel enim cursus, id dignissim ipsum fermentum...</p>
+                <a href="">Read More</a>
+            </article>
+        </section>
+
+        <section id="about" class="page-section">
+            <h2>About Us</h2>
+            <p>Welcome to Educational Insights, your go-to platform for knowledge on technology, health, and finance. Our mission is to empower individuals with the information they need to thrive in every aspect of life.</p>
+        </section>
+
+        <section id="contact" class="page-section">
+            <h2>Contact Us</h2>
+            <p>We'd love to hear from you! Reach out via email at <a href="mailto:info@educationalinsights.com">info@educationalinsights.com</a>.</p>
+        </section>
+    </main>
+
+   
+
+    <!-- <section id="comments">
+        <h2>Comments</h2>
+        <form id="comment-form">
+            <textarea id="comment" placeholder="Leave a comment..." required></textarea>
+            <button type="submit">Submit</button>
+        </form>
+        <ul id="comment-list"></ul>
+    </section> -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Educational Insights. All Rights Reserved.</p>
+        </div>
+    </footer>
+   
+</body>
+</html>
+ <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const form = document.getElementById('comment-form');
+            const commentList = document.getElementById('comment-list');
+
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
+                const commentText = document.getElementById('comment').value;
+                if (commentText) {
+                    const commentItem = document.createElement('li');
+                    commentItem.textContent = commentText;
+                    commentList.appendChild(commentItem);
+                    form.reset();
+                }
+            });
+        });
+    </script>

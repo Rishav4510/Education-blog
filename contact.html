@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
+    <style>
+        /* General Reset */
+        body, h1, h2, h3, p, label, input, textarea, button {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body Styling */
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background-image: url('https://static.india.com/wp-content/uploads/2022/05/education-image.jpg');
+            background-size: cover;
+            background-position: center;
+            color: #333;
+            line-height: 1.6;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 0;
+        }
+
+        /* Header Styling */
+        header {
+            background: rgba(0, 0, 0, 0.7); /* Dark overlay for header */
+            color: #fff;
+            padding: 20px 0;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        header .container {
+            width: 80%;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        header h1 {
+            font-family: 'Roboto', sans-serif;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        header nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        header nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 1.2rem;
+            font-weight: bold;
+            transition: color 0.3s, transform 0.3s;
+        }
+
+        header nav ul li a:hover {
+            color: #f9d342;
+            transform: scale(1.1);
+        }
+
+        /* Contact Section Styling */
+        #contact {
+            width: 80%;
+            margin: 40px auto;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.8); /* Slightly transparent background */
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        #contact h2 {
+            font-family: 'Roboto', sans-serif;
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #f9d342;
+            border-bottom: 2px solid #f9d342;
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+
+        #contact p {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+            color: #555;
+        }
+
+        /* Form Styling */
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        form label {
+            font-size: 1rem;
+            color: #333;
+        }
+
+        form input, form textarea {
+            padding: 10px;
+            font-size: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 100%;
+        }
+
+        form input:focus, form textarea:focus {
+            border-color: #f9d342;
+            outline: none;
+        }
+
+        form button {
+            padding: 12px 20px;
+            background: #f9d342;
+            color: #333;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.1rem;
+            transition: background 0.3s;
+        }
+
+        form button:hover {
+            background: #ffcc00;
+        }
+
+        form textarea {
+            resize: vertical;
+            height: 150px;
+        }
+
+        /* Thank-You Message Styling */
+        #thank-you-message {
+            font-size: 1.1rem;
+            color: #4caf50;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+
+        /* Footer Styling */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #333;
+            color: #fff;
+            margin-top: auto;
+        }
+
+        footer p {
+            font-size: 0.9rem;
+            margin: 0;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header nav ul {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            #contact {
+                width: 95%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Educational Blog</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="categories.html">Categories</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>If you have any questions or feedback, feel free to reach out to us using the form below:</p>
+        <form id="contact-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Your Name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Your Email" required>
+            
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+            
+            <button type="submit">Send</button>
+        </form>
+        
+        <!-- Thank-you message -->
+        <p id="thank-you-message" style="display: none;">Thank you for reaching out! We'll get back to you soon.</p>
+    </section>
+    
+    <footer>
+        <p>&copy; 2024 Educational Blog. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        // Get the form and thank-you message elements
+        const form = document.getElementById('contact-form');
+        const thankYouMessage = document.getElementById('thank-you-message');
+
+        // Add submit event listener
+        form.addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent form submission
+            
+            // Check if all fields are filled
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const message = document.getElementById('message').value.trim();
+
+            if (name === '' || email === '' || message === '') {
+                alert('Please fill out all the fields before submitting.');
+                return;
+            }
+
+            // Show thank-you message
+            thankYouMessage.style.display = 'block';
+
+            // Perform an action after 2 seconds (e.g., redirect)
+            setTimeout(function() {
+                window.location.href = 'index.html'; // Replace with your desired action
+            }, 2000);
+        });
+    </script>
+</body>
+</html>

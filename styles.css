@@ -1,0 +1,256 @@
+/* styles.css */
+
+/* General Reset */
+body, h1, h2, h3, p, ul, li, a, textarea, button {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background: url('https://static.india.com/wp-content/uploads/2022/05/education-image.jpg') no-repeat center center;
+    background-size: cover;
+    color: #fff;
+    line-height: 1.6;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header Styling */
+header {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    background-image: url(https://d138zd1ktt9iqe.cloudfront.net/media/seo_landing_files/file-3-types-of-education-1591979743.jpg);
+}
+
+header h1 {
+    font-size: 2.5rem;
+    color: #f9d342;
+    margin-bottom: 10px;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: color 0.3s, transform 0.3s;
+}
+
+header nav ul li a:hover {
+    color: #f9d342;
+    transform: scale(1.1);
+}
+
+
+
+
+/* Section Styling */
+.page-section {
+    margin: 20px auto;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    max-width: 80%;
+    text-align: left;
+}
+
+.page-section h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: #f9d342;
+    border-bottom: 2px solid #f9d342;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+/* Categories Grid Styling */
+.categories-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    justify-items: center; /* Centering items horizontally in each grid cell */
+}
+
+.category-item {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 350px; /* Limit the max width of each category */
+    text-align: center;
+}
+
+.category-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.category-item h3 {
+    margin-top: 15px;
+    font-size: 1.5rem;
+}
+
+.category-item p {
+    margin-top: 10px;
+    color: #555;
+}
+
+.category-item a {
+    display: inline-block;
+    margin-top: 15px;
+    color: #f9d342;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.category-item a:hover {
+    color: #ffcc00;
+}
+
+/* Footer Styling */
+footer {
+    background: #333;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+
+/* Blog Post Styling */
+.blog-post {
+    margin: 20px 0;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 15px;
+    color: #fff;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.blog-post:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+.blog-post img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.blog-post h3 {
+    font-size: 1.5rem;
+    color: #f9d342;
+}
+
+.blog-post a {
+    color: #f9d342;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.blog-post a:hover {
+    color: #fff;
+}
+
+/* Comment Section Styling */
+#comments {
+    margin: 20px auto;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    max-width: 80%;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+#comments h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #f9d342;
+}
+
+#comment-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #f9d342;
+    border-radius: 5px;
+    resize: none;
+}
+
+#comment-form button {
+    padding: 10px 20px;
+    background: #f9d342;
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s;
+}
+
+#comment-form button:hover {
+    background: #fff;
+}
+
+#comment-list {
+    list-style: none;
+    margin-top: 10px;
+    padding-left: 0;
+}
+
+#comment-list li {
+    margin: 10px 0;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .page-section {
+        max-width: 95%;
+    }
+
+    #comment-form textarea {
+        width: 100%;
+    }
+}
